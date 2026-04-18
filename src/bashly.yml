@@ -2,6 +2,10 @@ name: srcset
 help: create srcset images for use with img elements
 version: 0.1.0
 
+variables:
+  - name: IMG_TYPE
+    value: "*.jpg"
+
 dependencies:
   imagemagick:
     command: [magick]
@@ -14,11 +18,9 @@ flags:
     help: Path to image file
     default: "."
 
-  - long: --pattern
+  - long: --png
     short: -p
-    arg: pattern
-    help: Pattern to match when input is a directory
-    default: "*.jpg"
+    help: Generate srcset images for png instead of jpg
 
   - long: --large
     short: -l

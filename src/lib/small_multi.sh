@@ -1,6 +1,6 @@
 function small_multi() {
   declare -a SIZES=("150" "300" "600" "1000")
-  readarray -d '' files < <(find "${args[--input]}" -maxdepth 1 -iname "${args[--pattern]}" -type f -print0)
+  readarray -d '' files < <(find "${args[--input]}" -maxdepth 1 -iname "${IMG_TYPE}" -type f -print0)
   # add check for empty array
   if [ ${#files[@]} -eq 0 ]; then
     echo "No files found matching pattern ${args[--pattern]} in directory ${args[--input]}"
