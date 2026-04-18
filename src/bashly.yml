@@ -1,0 +1,31 @@
+name: websizer
+help: create srcset for img element
+version: 0.1.0
+
+dependencies:
+  imagemagick:
+    command: magick
+    help: run 'brew insall imagemagick' for macos or 'apt install imagemagick' for linux
+
+flags:
+  - long: --input
+    short: -i
+    arg: image
+    help: Path to image file
+    default: "."
+
+  - long: --pattern
+    short: -p
+    arg: pattern
+    help: Pattern to match when input is a directory
+    default: "*.jpg"
+
+  - long: --out
+    short: -o
+    arg: output
+    help: Path to output directory
+    default: "."
+
+examples:
+  - websizer -i=image.jpg -o=/website/images
+  - websizer -i=images/ -o=/website/images
