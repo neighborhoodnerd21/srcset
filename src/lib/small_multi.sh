@@ -8,9 +8,15 @@ function small_multi() {
   fi
   for i in "${files[@]}"; do
     name=$(basename "${i}")
-    mkdir "${name%.*}"
+    mkdir "${name%.*}" || {
+      echo "Failed to create directory for ${name}"
+      exit 1
+    }
     for j in "${SIZES[@]}"; do
-      magick "${name}" -resize "${j}x" "${name%.*}/${j}w.${name##*.}"
+      magick "${name}" -resize "${j}x" "${name%.*}/${j}w.${name##*.}" || {
+        echo "Failed to resize ${name} to ${j}w"
+        exit 1
+      }
       unset "$name"
     done
   done
