@@ -1,4 +1,4 @@
-function large_multi() {
+function small_multi() {
   declare -a SIZES=("150" "300" "600" "1000")
   readarray -d '' files < <(find "${args[--input]}" -maxdepth 1 -iname "${args[--pattern]}" -type f -print0)
   for i in "${files[@]}"; do
