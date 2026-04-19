@@ -8,21 +8,18 @@ NAME
 
 SYNOPSIS
 
-  srcset [-l, -s] [--input path] [--output path]
+  srcset [-l, -p] [--input path]
 
 DESCRIPTION
 
-  srcset takes an image file or directory of image files and generates multiple resized copies of the image[s] to be used to create
-  responsive images on webpages.
+  srcset takes an image file or directory of image files and generates multiple resized copies of the image[s] to be used to 
+  create responsive images on webpages. By default the command only processes jpg files but the -p flag can be used to
+  work with png files instead. The -l flag generates a full range of sizes for use with large images.
 
   -l large	generate full range of sizes for use with large images.
-
-  -s small	generate lower range of sizes for use with small images.
-
-  --input	path to image file[s]
-
-  --ouput	path to export images to.
+  -p png    generate png files instead of jpg.
+  --input	  path to image file[s]
 
 AUTHOR
 
-  neighborhoodnerd21  
+  neighborhoodnerd21
