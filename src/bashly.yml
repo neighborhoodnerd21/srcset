@@ -20,7 +20,7 @@ dependencies:
 args:
   - name: input
     help: Path to image file or directory containing images
-    default: "."
+    required: true
 
 flags:
   - long: --png
@@ -32,5 +32,6 @@ flags:
     help: Generate srcset images for large images
 
 examples:
-  - websizer -i=image.jpg -o=/website/images
-  - websizer -l -i=images/ -o=/website/images
+  - srcset
+  - srcset -lp
+  - srcset image.jpg

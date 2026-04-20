@@ -36,10 +36,25 @@ if [[ $large ]]; then
   SIZES=("${LG_SIZES[@]}")
 fi
 
-if [ -d "${args[input]}" ]; then
+if [ -p /dev/stdin ]; then
+  readarray -t files
+  for f in "${files[@]}"; do
+    if [[ -z "$f" ]]; then
+      echo "Error: Filenames cannot be empty."
+      exit 1
+    elif [[ "$f" == *"/"* ]]; then
+      echo "Invalid filename: '$f' contains a forward slash (/). Use this for paths, not filenames."
+      exit 1
+    else
+      continue
+    fi
+  done
+  mk_srcset
+elif [ -d "${args[input]}" ]; then
   get_files
   mk_srcset
 else
+  files=("${args[input]}")
   mk_srcset
 fi
 
