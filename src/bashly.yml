@@ -34,3 +34,4 @@ examples:
   - srcset
   - srcset -lp
   - srcset image.jpg
+  - ls | grep ".jpg" | srcset
