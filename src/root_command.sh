@@ -50,12 +50,15 @@ if [ -p /dev/stdin ]; then
     fi
   done
   mk_srcset
-elif [ -d "${args[input]}" ]; then
+elif [[ -n "${args[input]}" && -d "${args[input]}" ]]; then
   get_files
   mk_srcset
-else
+elif [[ -n "${args[input]}" && -f "${args[input]}" ]]; then
   files=("${args[input]}")
   mk_srcset
+else
+  echo "Error: No valid input provided. Please provide a file or directory."
+  exit 1
 fi
 
 exit 0
