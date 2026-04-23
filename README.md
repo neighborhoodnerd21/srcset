@@ -1,7 +1,8 @@
 # SRCSET  
 
-[Blog]()  
+[Blog](https://theneighborhoodnerdblog.blogspot.com/)  
 
+```txt
 NAME  
 
   srcset - generate sized copies of an image for use with srcset attribute for img elements.
@@ -18,9 +19,10 @@ DESCRIPTION
   from stdin as well, so it can be used in a pipeline with other commands. to work with multiple files, either pipe a list
   to srset or place them in a common directory and pass the directory as an argument.
 
-  -l large	generate full range of sizes for use with large images.
+  -l large	generate full range of sizes for use with large images.  
   -p png    generate png files instead of jpg.
 
 AUTHOR
 
   neighborhoodnerd21
+```
