@@ -1,6 +1,4 @@
-# SRCSET  
-
-[Blog](https://theneighborhoodnerdblog.blogspot.com/)  
+# srcset  
 
 ```txt
 NAME  
