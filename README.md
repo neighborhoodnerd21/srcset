@@ -7,7 +7,7 @@ NAME
 
 SYNOPSIS
 
-  srcset [-l, -p] [file or directory]
+  srcset [-l, -p] <file or directory>
 
 DESCRIPTION
 
