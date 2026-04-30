@@ -19,10 +19,18 @@ DESCRIPTION
   pipeline with other commands. to work with multiple files, either pipe a list to 
   srset or place them in a common directory and pass the directory as an argument.
 
-  -l large	generate full range of sizes for use with large images.  
-  -p png    generate png files instead of jpg.
+  -l, --large	      generate full range of sizes for use with large images.  
+  -p, --png         generate png files instead of jpg.
+
+  srcset file.jpg
+  srcset -l file.jpg
+  srcset -p file.png
+  srcset -l -p file.png
+  srcset < filelist.txt
+  srcset -l < filelist.txt
 
 AUTHOR
 
-  neighborhoodnerd21
+  NeighborhoodNerd21
+  
 ```
